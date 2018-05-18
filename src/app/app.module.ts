@@ -7,7 +7,6 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 import { AppComponent } from './app.component';
-import { PeopleComponent } from './people/people.component';
 import { PeopleListComponent } from './people-list/people-list.component';
 import { PeopleService } from './people.service';
 import { PersonDetailsComponent } from './person-details/person-details.component';
@@ -17,7 +16,6 @@ import { AppRoutingModule } from "./app-routing.module";
 @NgModule({
   declarations: [
     AppComponent,
-    PeopleComponent,
     PeopleListComponent,
     PersonDetailsComponent
   ],

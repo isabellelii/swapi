@@ -7,9 +7,9 @@ import 'rxjs/add/operator/map';
 import { Person } from './person';
 
 const PEOPLE : Person[] = [
-      {id: 1, name: 'Luke Skywalker', height: 177, weight: 70},
-      {id: 2, name: 'Darth Vader', height: 200, weight: 100},
-      {id: 3, name: 'Han Solo', height: 185, weight: 85},
+      {id: 1, name: 'Luke Skywalker', height: 177, weight: 70, gender: 'male', eye_color: 'blue', hair_color: 'blond'},
+      {id: 2, name: 'Darth Vader', height: 200, weight: 100, gender: 'male', eye_color: 'yellow', hair_color: 'none'},
+      {id: 3, name: 'Han Solo', height: 185, weight: 85, gender: 'male', eye_color: 'brown', hair_color: 'brown'}
     ];
 
 @Injectable()
@@ -49,6 +49,9 @@ function toPerson(r:any): Person{
     name: r.name,
     weight: Number.parseInt(r.mass),
     height: Number.parseInt(r.height),
+    gender: r.gender,
+    eye_color: r.eye_color,
+    hair_color: r.hair_color
   });
   console.log('Parsed person:', person);
   return person;
