@@ -16,7 +16,7 @@ import { Movie } from "../movie";
       <p> Director: {{movie.director}} </p>
       <p> Opening Crawl: {{movie.opening_crawl}} </p>
     </section>
-    <button (click)="gotoFilmList()">Back to movie list</button>
+    <button type="button"  [routerLink]="['/movies']">Back to movies list</button>
   </section>
   `
 })
