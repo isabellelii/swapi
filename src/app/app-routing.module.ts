@@ -5,6 +5,8 @@ import { PeopleListComponent } from "./people-list/people-list.component";
 import { PersonDetailsComponent } from "./person-details/person-details.component";
 import { FilmListComponent } from "./film-list/film-list.component";
 import { FilmDetailsComponent } from "./film-details/film-details.component";
+import { ShipDetailsComponent } from "./ship-details/ship-details.component";
+import { ShipListComponent } from "./ship-list/ship-list.component";
 
 const routes: Routes = [
   {
@@ -22,6 +24,14 @@ const routes: Routes = [
   {
     path: 'movies/:id',
     component: FilmDetailsComponent
+  },
+  {
+    path: 'starships',
+    component: ShipListComponent,
+  },
+  {
+    path: 'starships/:id',
+    component: ShipDetailsComponent
   },
 ];
 

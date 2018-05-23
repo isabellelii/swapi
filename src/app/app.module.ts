@@ -13,9 +13,11 @@ import { PersonDetailsComponent } from './person-details/person-details.componen
 import { FilmListComponent } from './film-list/film-list.component';
 import { FilmDetailsComponent } from './film-details/film-details.component';
 import { FilmService } from './film.service';
+import { ShipListComponent } from './ship-list/ship-list.component';
+import { ShipDetailsComponent } from './ship-details/ship-details.component';
+import { ShipService } from './ship.service';
 
 import { AppRoutingModule } from "./app-routing.module";
-
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { AppRoutingModule } from "./app-routing.module";
     PeopleListComponent,
     PersonDetailsComponent,
     FilmListComponent,
-    FilmDetailsComponent
+    FilmDetailsComponent,
+    ShipListComponent,
+    ShipDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,7 @@ import { AppRoutingModule } from "./app-routing.module";
     FormsModule,
     AppRoutingModule
   ],
-  providers: [PeopleService, FilmService],
+  providers: [PeopleService, FilmService, ShipService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

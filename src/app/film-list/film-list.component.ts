@@ -5,6 +5,7 @@ import { FilmService } from '../film.service';
 @Component({
   selector: 'app-film-list',
   template: `
+  <h1>Movies</h1>
   <ul>
     <li *ngFor="let movie of film">
       <a [routerLink]="['/movies', movie.id]">

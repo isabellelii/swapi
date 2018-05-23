@@ -16,7 +16,7 @@ import { Movie } from "../movie";
       <p> Director: {{movie.director}} </p>
       <p> Opening Crawl: {{movie.opening_crawl}} </p>
     </section>
-    <button type="button"  [routerLink]="['/movies']">Back to movies list</button>
+    <button (click)="gotoFilmList()">Back to peoples list</button>
   </section>
   `
 })
@@ -44,7 +44,7 @@ export class FilmDetailsComponent implements OnInit, OnDestroy {
         this.sub.unsubscribe();
     }
 
-    gotoPeoplesList(){
+    gotoFilmList(){
         let link = ['/movies'];
         this.router.navigate(link);
     }
