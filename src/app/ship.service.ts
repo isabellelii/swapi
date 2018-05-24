@@ -9,7 +9,7 @@ import { Starship } from './starship';
 const SHIP : Starship[] = [
       {id: 1, name: 'Executor', model: 'Executor-class star dreadnought', crew: 279144, passengers: 38000, max_atmosphering_speed: 1000, starship_class: 'Star dreadnought'},
       {id: 2, name: 'Executor', model: 'Executor-class star dreadnought', crew: 279144, passengers: 38000, max_atmosphering_speed: 1000, starship_class: 'Star dreadnought'},
-      {id: 3, name: 'Executor', model: 'Executor-class star dreadnought', crew: 279144, passengers: 38000, max_atmosphering_speed: 1000, starship_class: 'Star dreadnought'},
+      {id: 3, name: 'Executor', model: 'Executor-class star dreadnought', crew: 279144, passengers: 38000, max_atmosphering_speed: 1000, starship_class: 'Star dreadnought'}
     ];
 
 @Injectable()
@@ -61,6 +61,6 @@ function extractId(starshipData:any){
   return parseInt(extractedId);
 }
 
-function mapStarship(response:Response): Person{
+function mapStarship(response:Response): Starship{
    return toStarship(response.json());
 }

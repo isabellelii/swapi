@@ -1,4 +1,5 @@
 export interface Starship {
+  id: number;
   name: string;
   model: string;
   crew: number;

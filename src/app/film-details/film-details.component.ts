@@ -11,7 +11,7 @@ import { Movie } from "../movie";
     <section>
       <h2>You selected: {{movie.title}}</h2>
       <h3>Description</h3>
-      <p>  Title: {{movie.title}} </p>
+      <p> Title: {{movie.title}} </p>
       <p> Episode: {{movie.episode_id}} </p>
       <p> Director: {{movie.director}} </p>
       <p> Opening Crawl: {{movie.opening_crawl}} </p>

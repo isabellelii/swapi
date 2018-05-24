@@ -16,6 +16,9 @@ import { FilmService } from './film.service';
 import { ShipListComponent } from './ship-list/ship-list.component';
 import { ShipDetailsComponent } from './ship-details/ship-details.component';
 import { ShipService } from './ship.service';
+import { AllplanetsService } from './allplanets.service';
+import { AllplanetsListComponent } from './allplanets-list/allplanets-list.component';
+import { AllplanetsDetailsComponent } from './allplanets-details/allplanets-details.component';
 
 import { AppRoutingModule } from "./app-routing.module";
 
@@ -27,7 +30,9 @@ import { AppRoutingModule } from "./app-routing.module";
     FilmListComponent,
     FilmDetailsComponent,
     ShipListComponent,
-    ShipDetailsComponent
+    ShipDetailsComponent,
+    AllplanetsListComponent,
+    AllplanetsDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,7 @@ import { AppRoutingModule } from "./app-routing.module";
     FormsModule,
     AppRoutingModule
   ],
-  providers: [PeopleService, FilmService, ShipService],
+  providers: [PeopleService, FilmService, ShipService, AllplanetsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

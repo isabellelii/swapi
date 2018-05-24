@@ -7,6 +7,8 @@ import { FilmListComponent } from "./film-list/film-list.component";
 import { FilmDetailsComponent } from "./film-details/film-details.component";
 import { ShipDetailsComponent } from "./ship-details/ship-details.component";
 import { ShipListComponent } from "./ship-list/ship-list.component";
+import { AllplanetsListComponent } from "./allplanets-list/allplanets-list.component";
+import { AllplanetsDetailsComponent } from "./allplanets-details/allplanets-details.component";
 
 const routes: Routes = [
   {
@@ -32,6 +34,14 @@ const routes: Routes = [
   {
     path: 'starships/:id',
     component: ShipDetailsComponent
+  },
+  {
+    path: 'planets',
+    component: AllplanetsListComponent,
+  },
+  {
+    path: 'planets/:id',
+    component: AllplanetsDetailsComponent
   },
 ];
 
