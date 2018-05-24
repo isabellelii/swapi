@@ -11,6 +11,8 @@ import { AllplanetsListComponent } from "./allplanets-list/allplanets-list.compo
 import { AllplanetsDetailsComponent } from "./allplanets-details/allplanets-details.component";
 import { SpeciesListComponent } from './species-list/species-list.component';
 import { SpeciesDetailsComponent } from './species-details/species-details.component';
+import { VehiclesListComponent } from './vehicles-list/vehicles-list.component';
+import { VehiclesDetailsComponent } from './vehicles-details/vehicles-details.component';
 
 const routes: Routes = [
   {
@@ -52,6 +54,14 @@ const routes: Routes = [
   {
     path: 'species/:id',
     component: SpeciesDetailsComponent
+  },
+  {
+    path: 'vehicles',
+    component: VehiclesListComponent,
+  },
+  {
+    path: 'vehicles/:id',
+    component: VehiclesDetailsComponent
   },
 ];
 

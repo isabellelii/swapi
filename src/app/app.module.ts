@@ -22,6 +22,9 @@ import { AllplanetsDetailsComponent } from './allplanets-details/allplanets-deta
 import { SpeciesService } from './species.service';
 import { SpeciesListComponent } from './species-list/species-list.component';
 import { SpeciesDetailsComponent } from './species-details/species-details.component';
+import { VehiclesService} from './vehicles.service';
+import { VehiclesListComponent } from './vehicles-list/vehicles-list.component';
+import { VehiclesDetailsComponent } from './vehicles-details/vehicles-details.component';
 
 import { AppRoutingModule } from "./app-routing.module";
 
@@ -37,7 +40,9 @@ import { AppRoutingModule } from "./app-routing.module";
     AllplanetsListComponent,
     AllplanetsDetailsComponent,
     SpeciesListComponent,
-    SpeciesDetailsComponent
+    SpeciesDetailsComponent,
+    VehiclesListComponent,
+    VehiclesDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +50,7 @@ import { AppRoutingModule } from "./app-routing.module";
     FormsModule,
     AppRoutingModule
   ],
-  providers: [PeopleService, FilmService, ShipService, AllplanetsService, SpeciesService],
+  providers: [PeopleService, FilmService, ShipService, AllplanetsService, SpeciesService, VehiclesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
