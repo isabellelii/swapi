@@ -9,6 +9,8 @@ import { ShipDetailsComponent } from "./ship-details/ship-details.component";
 import { ShipListComponent } from "./ship-list/ship-list.component";
 import { AllplanetsListComponent } from "./allplanets-list/allplanets-list.component";
 import { AllplanetsDetailsComponent } from "./allplanets-details/allplanets-details.component";
+import { SpeciesListComponent } from './species-list/species-list.component';
+import { SpeciesDetailsComponent } from './species-details/species-details.component';
 
 const routes: Routes = [
   {
@@ -42,6 +44,14 @@ const routes: Routes = [
   {
     path: 'planets/:id',
     component: AllplanetsDetailsComponent
+  },
+  {
+    path: 'species',
+    component: SpeciesListComponent,
+  },
+  {
+    path: 'species/:id',
+    component: SpeciesDetailsComponent
   },
 ];
 

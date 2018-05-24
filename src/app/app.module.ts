@@ -19,6 +19,9 @@ import { ShipService } from './ship.service';
 import { AllplanetsService } from './allplanets.service';
 import { AllplanetsListComponent } from './allplanets-list/allplanets-list.component';
 import { AllplanetsDetailsComponent } from './allplanets-details/allplanets-details.component';
+import { SpeciesService } from './species.service';
+import { SpeciesListComponent } from './species-list/species-list.component';
+import { SpeciesDetailsComponent } from './species-details/species-details.component';
 
 import { AppRoutingModule } from "./app-routing.module";
 
@@ -32,7 +35,9 @@ import { AppRoutingModule } from "./app-routing.module";
     ShipListComponent,
     ShipDetailsComponent,
     AllplanetsListComponent,
-    AllplanetsDetailsComponent
+    AllplanetsDetailsComponent,
+    SpeciesListComponent,
+    SpeciesDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +45,7 @@ import { AppRoutingModule } from "./app-routing.module";
     FormsModule,
     AppRoutingModule
   ],
-  providers: [PeopleService, FilmService, ShipService, AllplanetsService],
+  providers: [PeopleService, FilmService, ShipService, AllplanetsService, SpeciesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
