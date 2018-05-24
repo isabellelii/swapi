@@ -10,6 +10,21 @@ import { AppComponent } from './app.component';
 import { PeopleListComponent } from './people-list/people-list.component';
 import { PeopleService } from './people.service';
 import { PersonDetailsComponent } from './person-details/person-details.component';
+import { FilmListComponent } from './film-list/film-list.component';
+import { FilmDetailsComponent } from './film-details/film-details.component';
+import { FilmService } from './film.service';
+import { ShipListComponent } from './ship-list/ship-list.component';
+import { ShipDetailsComponent } from './ship-details/ship-details.component';
+import { ShipService } from './ship.service';
+import { AllplanetsService } from './allplanets.service';
+import { AllplanetsListComponent } from './allplanets-list/allplanets-list.component';
+import { AllplanetsDetailsComponent } from './allplanets-details/allplanets-details.component';
+import { SpeciesService } from './species.service';
+import { SpeciesListComponent } from './species-list/species-list.component';
+import { SpeciesDetailsComponent } from './species-details/species-details.component';
+import { VehiclesService} from './vehicles.service';
+import { VehiclesListComponent } from './vehicles-list/vehicles-list.component';
+import { VehiclesDetailsComponent } from './vehicles-details/vehicles-details.component';
 
 import { AppRoutingModule } from "./app-routing.module";
 
@@ -17,7 +32,17 @@ import { AppRoutingModule } from "./app-routing.module";
   declarations: [
     AppComponent,
     PeopleListComponent,
-    PersonDetailsComponent
+    PersonDetailsComponent,
+    FilmListComponent,
+    FilmDetailsComponent,
+    ShipListComponent,
+    ShipDetailsComponent,
+    AllplanetsListComponent,
+    AllplanetsDetailsComponent,
+    SpeciesListComponent,
+    SpeciesDetailsComponent,
+    VehiclesListComponent,
+    VehiclesDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +50,7 @@ import { AppRoutingModule } from "./app-routing.module";
     FormsModule,
     AppRoutingModule
   ],
-  providers: [PeopleService],
+  providers: [PeopleService, FilmService, ShipService, AllplanetsService, SpeciesService, VehiclesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

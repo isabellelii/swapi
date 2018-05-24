@@ -5,6 +5,7 @@ import { PeopleService } from "../people.service";
 @Component({
   selector: 'app-people-list',
   template: `
+  <h1>Characters</h1>
   <ul>
     <li *ngFor="let person of people">
       <a [routerLink]="['/persons', person.id]">
