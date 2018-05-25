@@ -8,17 +8,22 @@ import { Subject } from 'rxjs/Subject';
   selector: 'app-people-list',
   template: `
   <h1>Characters</h1>
+  <div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="">Search</span>
+  </div>
   <input
     (keyup)="searchTerm$.next($event.target.value)" >
-  <ul *ngIf="results">
-    <li *ngFor="let result of results | slice:0:9">
-      <h1>  {{ result.name  }}</h1>
+    <ul *ngIf="results">
+      <li *ngFor="let result of results | slice:0:9">
+        <h1>  {{ result.name  }}</h1>
       <p>
         {{result.name}} is a {{result.gender}} that weights {{result.weight}}kg, is {{result.height}} centimeters tall
         and have {{result.eye_color}} eyes and {{result.hair_color}} hair.
       </p>
     </li>
   </ul>
+  </div>
 
   <div class="list-group">
     <p *ngFor="let person of people">
