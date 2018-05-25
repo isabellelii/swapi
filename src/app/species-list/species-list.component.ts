@@ -6,13 +6,13 @@ import { SpeciesService } from '../species.service';
   selector: 'app-species-list',
   template: `
   <h1>Species</h1>
-  <ul>
-    <li *ngFor="let animal of species">
-      <a [routerLink]="['/species', animal.id]">
+  <div class="list-group">
+    <p *ngFor="let animal of species">
+      <a [routerLink]="['/species', animal.id]" class="list-group-item list-group-item-action light">
         {{animal.name}}
       </a>
-    </li>
-  </ul>
+    </p>
+  </div>
   `,
   styleUrls: ['./species-list.component.css']
 })

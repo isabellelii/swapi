@@ -6,13 +6,13 @@ import { ShipService } from '../ship.service';
   selector: 'app-ship-list',
   template: `
   <h1>Starships</h1>
-  <ul>
-    <li *ngFor="let starship of ship">
-      <a [routerLink]="['/starships', starship.id]">
+  <div class="list-group">
+    <p *ngFor="let starship of ship">
+      <a [routerLink]="['/starships', starship.id]"  class="list-group-item list-group-item-action light">
       {{starship.name}}
     </a>
-  </li>
-</ul>
+  </p>
+</div>
   `,
   styleUrls: ['./ship-list.component.css']
 })

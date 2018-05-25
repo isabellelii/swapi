@@ -6,13 +6,13 @@ import { AllplanetsService } from '../allplanets.service';
   selector: 'app-allplanets-list',
   template: `
   <h1>Planets</h1>
-  <ul>
-    <li *ngFor="let planet of allplanets">
-      <a [routerLink]="['/planets', planet.id]">
+  <div class="list-group">
+    <p *ngFor="let planet of allplanets">
+      <a [routerLink]="['/planets', planet.id]" class="list-group-item list-group-item-action light">
         {{planet.name}}
       </a>
-    </li>
-  </ul>
+    </p>
+  </div>
   `,
   styleUrls: ['./allplanets-list.component.css']
 })

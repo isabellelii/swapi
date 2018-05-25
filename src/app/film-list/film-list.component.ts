@@ -6,13 +6,13 @@ import { FilmService } from '../film.service';
   selector: 'app-film-list',
   template: `
   <h1>Movies</h1>
-  <ul>
-    <li *ngFor="let movie of film">
-      <a [routerLink]="['/movies', movie.id]">
+  <div class="list-group">
+    <p *ngFor="let movie of film">
+      <a [routerLink]="['/movies', movie.id]" class="list-group-item list-group-item-action light">
       {{movie.title}}
     </a>
-  </li>
-</ul>
+  </p>
+</div>
   `,
   styleUrls: ['./film-list.component.css']
 })

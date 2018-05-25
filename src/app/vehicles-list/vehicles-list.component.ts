@@ -6,13 +6,13 @@ import { VehiclesService } from '../vehicles.service';
   selector: 'app-vehicles-list',
   template: `
   <h1>Vehicles</h1>
-  <ul>
-    <li *ngFor="let transport of vehicles">
-      <a [routerLink]="['/vehicles', transport.id]">
+  <div class="list-group">
+    <p *ngFor="let transport of vehicles">
+      <a [routerLink]="['/vehicles', transport.id]" class="list-group-item list-group-item-action light">
       {{transport.name}}
     </a>
-  </li>
-</ul>
+  </p>
+</div>
   `,
   styleUrls: ['./vehicles-list.component.css']
 })
