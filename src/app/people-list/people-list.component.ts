@@ -31,7 +31,7 @@ import { Subject } from 'rxjs/Subject';
         {{person.name}}
       </a>
     </p>
-    </div>
+  </div>
   `,
   styleUrls: ['./people-list.component.css'],
   providers: [PeoplesearchService]
