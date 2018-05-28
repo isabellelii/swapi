@@ -42,12 +42,12 @@ export class AllplanetsListComponent implements OnInit {
   searchTerm$ = new Subject<string>();
 
   constructor(private allplanetsService: AllplanetsService,
-    private planetsearchService: PlanetsearchService) {
-    this.planetsearchService.search(this.searchTerm$)
-      .subscribe(results => {
-        this.results = results.results;
-      });
-  }
+              private planetsearchService: PlanetsearchService) {
+                this.planetsearchService.search(this.searchTerm$)
+                .subscribe(results => {
+                  this.results = results.results;
+              });
+            }
 
   ngOnInit() {
     this.allplanetsService

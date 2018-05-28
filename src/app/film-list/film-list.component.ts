@@ -24,15 +24,15 @@ import { Subject } from 'rxjs/Subject';
         <p>  Opening crawl: {{result.opening_crawl}}.</p>
       </li>
     </ul>
-</div>
+  </div>
 
   <div class="list-group">
     <p *ngFor="let movie of film">
       <a [routerLink]="['/movies', movie.id]" class="list-group-item list-group-item-action light">
       {{movie.title}}
-    </a>
-  </p>
-</div>
+      </a>
+    </p>
+  </div>
   `,
   styleUrls: ['./film-list.component.css'],
   providers: [FilmsearchService]
@@ -43,8 +43,8 @@ export class FilmListComponent implements OnInit {
   searchTerm$ = new Subject<string>();
 
   constructor(private filmService: FilmService,
-              private filmsearchService: FilmsearchService){
-                this.filmsearchService.search(this.searchTerm$)
+    private filmsearchService: FilmsearchService) {
+    this.filmsearchService.search(this.searchTerm$)
       .subscribe(results => {
         this.results = results.results;
       });
@@ -52,7 +52,7 @@ export class FilmListComponent implements OnInit {
 
   ngOnInit() {
     this.filmService
-        .getAll()
-        .subscribe(p => this.film = p);
+      .getAll()
+      .subscribe(p => this.film = p);
   }
 }
