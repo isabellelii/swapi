@@ -3,8 +3,8 @@ import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
-import { AlertService } from '../alert.service';
-import { UserService } from '../user.service';
+import { AlertService } from '../_services/alert.service';
+import { UserService } from '../_services/user.service';
 
 @Component({
   selector: 'app-register',

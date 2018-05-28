@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 
-import { SpeciesService } from "../species.service";
+import { SpeciesService } from "../_services/species.service";
 import { Animal } from "../animal";
 @Component({
   selector: 'app-species-details',

@@ -13,11 +13,11 @@ import { SpeciesListComponent } from './species-list/species-list.component';
 import { SpeciesDetailsComponent } from './species-details/species-details.component';
 import { VehiclesListComponent } from './vehicles-list/vehicles-list.component';
 import { VehiclesDetailsComponent } from './vehicles-details/vehicles-details.component';
-
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { AuthGuard } from './auth.guard';
+
+import { AuthGuard } from './_guards/auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },

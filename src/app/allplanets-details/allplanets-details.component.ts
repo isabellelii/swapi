@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 
-import { AllplanetsService } from '../allplanets.service';
+import { AllplanetsService } from '../_services/allplanets.service';
 import { Planet } from '../planet';
 
 @Component({

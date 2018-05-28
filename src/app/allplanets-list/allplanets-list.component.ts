@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Planet } from '../planet';
-import { AllplanetsService } from '../allplanets.service';
-import { PlanetsearchService } from '../planetsearch.service';
+import { AllplanetsService } from '../_services/allplanets.service';
+import { PlanetsearchService } from '../_services/planetsearch.service';
 import { Subject } from 'rxjs/Subject';
 
 @Component({

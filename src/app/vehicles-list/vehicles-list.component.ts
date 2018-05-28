@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Transport } from '../transport';
-import { VehiclesService } from '../vehicles.service';
-import { VehiclesearchService } from '../vehiclesearch.service';
+import { VehiclesService } from '../_services/vehicles.service';
+import { VehiclesearchService } from '../_services/vehiclesearch.service';
 import { Subject } from 'rxjs/Subject';
 
 @Component({
@@ -19,7 +19,7 @@ import { Subject } from 'rxjs/Subject';
         <h1>  {{ result.name  }}</h1>
         <p>
           {{result.model}} is a vehicle with a length of {{result.length}} centimeters, that has a max speed of {{result.max_atmosphering_speed}} kilometers per hour.
-          The vehicle has a crew of {{result.crew}} people and {{result.passengers}} passengers. 
+          The vehicle has a crew of {{result.crew}} people and {{result.passengers}} passengers.
         </p>
       </li>
     </ul>

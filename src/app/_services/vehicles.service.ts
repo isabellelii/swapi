@@ -4,7 +4,7 @@ import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-import { Transport } from './transport';
+import { Transport } from '../transport';
 
 const VEHICLES : Transport[] = [
     {id: 1, name: 'Sand Crawler', model: 'Digger Crawler', length: 36.8, max_atmosphering_speed: 30, crew: 46, passengers: 50000, vehicles_class: 'wheeled'},
