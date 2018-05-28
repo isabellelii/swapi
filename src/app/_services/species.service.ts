@@ -4,7 +4,7 @@ import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-import { Animal } from './animal';
+import { Animal } from '../animal';
 
 const SPECIES : Animal[] = [
     {id: 1, name: 'Hutt', classification: 'gastropod', average_height: 300, hair_color: 'n/a', eye_colors: 'yellow', average_lifespan: 1000, language: 'Huttese'},

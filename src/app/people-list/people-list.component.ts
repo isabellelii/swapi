@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Person } from '../person';
-import { PeopleService } from "../people.service";
-import { PeoplesearchService } from '../peoplesearch.service';
+import { PeopleService } from "../_services/people.service";
+import { PeoplesearchService } from '../_services/peoplesearch.service';
 import { Subject } from 'rxjs/Subject';
 
 @Component({

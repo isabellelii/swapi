@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 
-import { VehiclesService } from '../vehicles.service';
+import { VehiclesService } from '../_services/vehicles.service';
 import { Transport } from '../transport';
 
 @Component({

@@ -4,7 +4,7 @@ import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-import { Movie } from './movie';
+import { Movie } from '../movie';
 
 const FILM : Movie[] = [
   {id: 1, title: 'A New Hope', episode_id: 4, director: 'George Lucas', opening_crawl: 'text'},

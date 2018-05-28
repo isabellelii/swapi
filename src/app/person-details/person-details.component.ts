@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 
-import { PeopleService } from "../people.service";
+import { PeopleService } from "../_services/people.service";
 import { Person } from "../person";
 
 @Component({

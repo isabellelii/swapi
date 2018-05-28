@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { PeopleService } from './people.service';
-import { Person } from './person';
+import { Person } from '../person';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/debounceTime';
