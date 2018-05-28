@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import { ReactiveFormsModule }    from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { PeopleListComponent } from './people-list/people-list.component';
@@ -25,8 +27,19 @@ import { SpeciesDetailsComponent } from './species-details/species-details.compo
 import { VehiclesService} from './vehicles.service';
 import { VehiclesListComponent } from './vehicles-list/vehicles-list.component';
 import { VehiclesDetailsComponent } from './vehicles-details/vehicles-details.component';
+import { AlertService } from './alert.service';
+import { AuthenticationService} from './authentication.service';
+import { UserService } from './user.service';
+import { AuthGuard } from './auth.guard';
+import { JwtInterceptor } from './jwt.interceptor';
+
+import { fakeBackendProvider } from './fake-backend';
 
 import { AppRoutingModule } from "./app-routing.module";
+import { AlertComponent } from './alert/alert.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -42,15 +55,40 @@ import { AppRoutingModule } from "./app-routing.module";
     SpeciesListComponent,
     SpeciesDetailsComponent,
     VehiclesListComponent,
-    VehiclesDetailsComponent
+    VehiclesDetailsComponent,
+    AlertComponent,
+    HomeComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [PeopleService, FilmService, ShipService, AllplanetsService, SpeciesService, VehiclesService],
+  providers: [
+    PeopleService,
+    FilmService,
+    ShipService,
+    AllplanetsService,
+    SpeciesService,
+    VehiclesService,
+    AuthGuard,
+    AlertService,
+    AuthenticationService,
+    UserService,
+    {
+          provide: HTTP_INTERCEPTORS,
+          useClass: JwtInterceptor,
+          multi: true
+      },
+
+      fakeBackendProvider
+  ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
