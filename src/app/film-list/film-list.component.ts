@@ -9,15 +9,16 @@ import { Subject } from 'rxjs/Subject';
   selector: 'app-film-list',
   template: `
   <h1>Movies</h1>
-  <div class="input-group">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="">Search</span>
-  </div>
-  <input
+
+  <div class="input-group input-group-lg">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-lg">Search for movies</span>
+    </div>
+  <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm"
     (keyup)="searchTerm$.next($event.target.value)" >
     <ul *ngIf="results">
       <li *ngFor="let result of results | slice:0:9">
-        <h1>  {{ result.title  }}</h1>
+        <h2>  {{ result.title  }}</h2>
         <p> Title: {{result.title}} </p>
         <p> Episode: {{result.episode_id}} </p>
         <p> Director: {{result.director}}. </p>

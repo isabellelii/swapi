@@ -7,11 +7,11 @@ import { Starship } from "../starship";
 @Component({
   selector: 'app-ship-details',
   template: `
-  <div class="card" style="width: 30rem;">
-  <div class="card-body">
-    <section *ngIf="starship">
+  <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+  <section *ngIf="starship">
     <section>
-      <h2 class="card-title">You selected: {{starship.name}}</h2>
+      <h2 class="display-4">You selected: {{starship.name}}</h2>
       <h3>Description</h3>
       <p>  Name: {{starship.name}} </p>
       <p>  Model: {{starship.model}} </p>
@@ -20,7 +20,7 @@ import { Starship } from "../starship";
       <p>  Maximum speed: {{starship.max_atmosphering_speed}} kilometer per hour</p>
       <p>  Starship class: {{starship.starship_class}} </p>
     </section>
-    <button class="btn btn-outline-warning" [routerLink]="['/starships']">Back to starships list</button>
+    <button class="btn btn-outline-warning btn-lg btn-block" [routerLink]="['/starships']">Back to starships list</button>
   </section>
   </div>
 </div>

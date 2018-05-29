@@ -7,18 +7,18 @@ import { Movie } from "../movie";
 @Component({
   selector: 'app-film-details',
   template: `
-  <div class="card" style="width: 30rem;">
-  <div class="card-body">
-    <section *ngIf="movie">
+  <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+  <section *ngIf="movie">
     <section>
-      <h2 class="card-title">You selected: {{movie.title}}</h2>
+      <h2 class="display-4">You selected: {{movie.title}}</h2>
       <h3>Description</h3>
       <p> Title: {{movie.title}} </p>
       <p> Episode: {{movie.episode_id}} </p>
       <p> Director: {{movie.director}} </p>
       <p> Opening Crawl: {{movie.opening_crawl}} </p>
     </section>
-    <button class="btn btn-outline-warning" (click)="gotoFilmList()">Back to peoples list</button>
+    <button class="btn btn-outline-warning btn-lg btn-block" (click)="gotoFilmList()">Back to peoples list</button>
     </section>
   </div>
 </div>

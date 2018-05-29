@@ -7,19 +7,20 @@ import { Subject } from 'rxjs/Subject';
 @Component({
   selector: 'app-people-list',
   template: `
-  <h1>Characters</h1>
-  <div class="input-group">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="">Search</span>
-  </div>
-  <input
+  <h2>Characters</h2>
+
+  <div class="input-group input-group-lg">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-lg">Search for people</span>
+    </div>
+  <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm"
     (keyup)="searchTerm$.next($event.target.value)" >
     <ul *ngIf="results">
       <li *ngFor="let result of results | slice:0:9">
-        <h1>  {{ result.name  }}</h1>
+      <h2>  {{ result.name  }}</h2>
       <p>
         {{result.name}} is a {{result.gender}} that weights {{result.weight}}kg, is {{result.height}} centimeters tall
-        and have {{result.eye_color}} eyes and {{result.hair_color}} hair.
+        and have {{result.eye_color}} eyes and {{result.hair_color}} hair. 
       </p>
     </li>
   </ul>

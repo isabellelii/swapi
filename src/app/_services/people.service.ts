@@ -45,7 +45,6 @@ function mapPersons(response:Response): Person[]{
 function toPerson(r:any): Person{
   let person = <Person>({
     id: extractId(r),
-    url: r.url,
     name: r.name,
     weight: Number.parseInt(r.mass),
     height: Number.parseInt(r.height),

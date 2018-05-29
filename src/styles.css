@@ -1,12 +1,12 @@
 body {
-  background-image: url('https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a8fcff3f457ee34c77fac59710270bc3&auto=format&fit=crop&w=1052&q=80');
+  background-image: url('https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=413d29f6051e59b9d2317d8d827c8279&auto=format&fit=crop&w=770&q=80');
   background-repeat: repeat;
   background-size: cover;
 }
 
 h1 {
   color: #d9c940;
-  font-size: 50px;
+  font-size: 80px;
   font-family: monospace;
   text-align: center;
   margin-top: 4%;
@@ -15,6 +15,7 @@ h1 {
 h2 {
   color: #d9c940;
   text-align: center;
+  font-size: 50px;
 }
 
 h3 {
@@ -53,6 +54,11 @@ label {
   color: #d9c940;
 }
 
+.navbar-dark .navbar-brand {
+  color: #d9c940;
+  font-size: 30px;
+}
+
 .btn-block+.btn-block {
   background-color: black;
   margin-bottom: 3%;
@@ -63,20 +69,38 @@ label {
   margin-bottom: 3%;
 }
 
+.btn-block+.btn-block:hover {
+  background-color: #d9c940;
+}
+
+.btn:not(:disabled):not(.disabled):hover {
+  background-color: #d9c940;
+}
+
 .input-group {
   margin-bottom: 5%;
   margin-top: 3%;
 }
 
-.input-group-text {
+.form-control {
   background-color: black;
   color: #d9c940;
+  border: 3px solid #d9c940;
+}
+.form-control:focus {
+  background-color: black;
+  color: #d9c940;
+}
+
+.input-group-text {
+  background-color: #d9c940;
+  color: black;
   border: 1px solid #d9c940;
 }
 
 input {
   background-color: black;
-  border: 1px solid #d9c940;
+  border: 2px solid #d9c940;
   color: #d9c940;
 }
 
@@ -96,14 +120,20 @@ input {
 
 ul {
   background-color: black;
+  width: 100%;
 }
 
-div.card-body {
-  background-image: url('https://i.pinimg.com/originals/5c/03/da/5c03da8971db5da45a4d7be7a1db2c59.jpg');
+.jumbotron-fluid {
+  background-image: url('https://vignette.wikia.nocookie.net/phineasandferb/images/5/55/DeathStarPFStarWars.png/revision/latest?cb=20140628170900');
+  background-repeat: repeat;
+  background-size: cover;
 }
 
 .btn-outline-warning {
   color: #d9c940;
   border-color: #d9c940;
-  margin-left: 30%;
+}
+
+.page-footer {
+  background-color: black;
 }

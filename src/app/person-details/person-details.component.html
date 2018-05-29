@@ -1,16 +1,18 @@
-<div class="card" style="width: 30rem;">
-<div class="card-body">
+<div class="jumbotron jumbotron-fluid">
+<div class="container">
 <section *ngIf="person">
   <section>
-    <h2 class="card-title">You selected: {{person.name}}</h2>
+    <h2 class="display-4">You selected: {{person.name}}</h2>
     <h3>Description</h3>
-    <p>
-      {{person.name}} is a {{person.gender}} that weights {{person.weight}}kg, is {{person.height}} centimeters tall
-      and have {{person.eye_color}} eyes and {{person.hair_color}} hair.
-    </p>
-  </section>
+    <p>  Name: {{person.name}} </p>
+    <p>  Height: {{person.height}} centimeters</p>
+    <p>  Gender: {{person.gender}} </p>
+    <p>  Hair color: {{person.hair_color}} </p>
+    <p>  Eye colors: {{person.eye_color}} </p>
+    <p>  Weight: {{person.weight}} kilo</p>
 
-  <button class="btn btn-outline-warning" (click)="gotoPeoplesList()">Back to peoples list</button>
+  </section>
+  <button class="btn btn-outline-warning btn-lg btn-block" (click)="gotoPeoplesList()">Back to peoples list</button>
 </section>
 </div>
 </div>

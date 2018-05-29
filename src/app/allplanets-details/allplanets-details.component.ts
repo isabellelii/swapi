@@ -7,12 +7,11 @@ import { Planet } from '../planet';
 @Component({
   selector: 'app-allplanets-details',
   template: `
-  <div class="card" style="width: 30rem;">
-  <div class="card-body">
-
+  <div class="jumbotron jumbotron-fluid">
+  <div class="container">
   <section *ngIf="planet">
-  <section>
-    <h2 class="card-title">You selected: {{planet.name}}</h2>
+    <section>
+      <h2 class="display-4">You selected: {{planet.name}}</h2>
     <h3>Description</h3>
     <p>  Name: {{planet.name}} </p>
     <p>  Rotation period: {{planet.rotation_period}} </p>
@@ -21,7 +20,7 @@ import { Planet } from '../planet';
     <p>  Climate: {{planet.climate}} </p>
     <p>  Population: {{planet.population}} people</p>
   </section>
-  <button class="btn btn-outline-warning" (click)="gotoAllplanetsList()">Back to planets list</button>
+  <button class="btn btn-outline-warning btn-lg btn-block" (click)="gotoAllplanetsList()">Back to planets list</button>
 </section>
 </div>
 </div>
