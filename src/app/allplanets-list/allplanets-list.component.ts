@@ -27,7 +27,7 @@ import { Subject } from 'rxjs/Subject';
 
   <div class="list-group">
     <p *ngFor="let planet of allplanets">
-      <a [routerLink]="['/planets', planet.id]" class="list-group-item list-group-item-action light">
+      <a [routerLink]="['/planets', planet.id]" class="list-group-item list-group-item-action dark">
         {{planet.name}}
       </a>
     </p>

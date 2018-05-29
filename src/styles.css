@@ -17,6 +17,11 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  color: #d9c940;
+  text-align: center;
+}
+
 a {
   color: #d9c940;
   text-align: center;
@@ -38,4 +43,67 @@ form {
 
 label {
   color: #d9c940;
+}
+
+.bg-dark {
+  background-color: #000000!important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #d9c940;
+}
+
+.btn-block+.btn-block {
+  background-color: black;
+  margin-bottom: 3%;
+}
+
+.btn:not(:disabled):not(.disabled) {
+  background-color: black;
+  margin-bottom: 3%;
+}
+
+.input-group {
+  margin-bottom: 5%;
+  margin-top: 3%;
+}
+
+.input-group-text {
+  background-color: black;
+  color: #d9c940;
+  border: 1px solid #d9c940;
+}
+
+input {
+  background-color: black;
+  border: 1px solid #d9c940;
+  color: #d9c940;
+}
+
+.list-group-item {
+  background-color: black;
+  border: 1px solid #d9c940;
+  color: #d9c940;
+}
+
+.list-group-item:active {
+  background-color: #d9c940;
+}
+
+.list-group-item:hover {
+  background-color: #d9c940;
+}
+
+ul {
+  background-color: black;
+}
+
+div.card-body {
+  background-image: url('https://i.pinimg.com/originals/5c/03/da/5c03da8971db5da45a4d7be7a1db2c59.jpg');
+}
+
+.btn-outline-warning {
+  color: #d9c940;
+  border-color: #d9c940;
+  margin-left: 30%;
 }

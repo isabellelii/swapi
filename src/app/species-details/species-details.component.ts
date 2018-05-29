@@ -6,9 +6,11 @@ import { Animal } from "../animal";
 @Component({
   selector: 'app-species-details',
   template: `
+  <div class="card" style="width: 30rem;">
+  <div class="card-body">
   <section *ngIf="animal">
     <section>
-      <h2>You selected: {{animal.name}}</h2>
+      <h2 class="card-title">You selected: {{animal.name}}</h2>
       <h3>Description</h3>
       <p>  Name: {{animal.name}} </p>
       <p>  Average height: {{animal.average_height}} </p>
@@ -18,8 +20,10 @@ import { Animal } from "../animal";
       <p>  Average lifespan: {{animal.average_lifespan}} </p>
       <p>  Language: {{animal.language}} </p>
     </section>
-    <button type="button"  [routerLink]="['/species']">Back to species list</button>
+    <button class="btn btn-outline-warning" [routerLink]="['/species']">Back to species list</button>
   </section>
+  </div>
+</div>
   `
 })
 export class SpeciesDetailsComponent implements OnInit {
