@@ -43,15 +43,15 @@ export class ShipListComponent implements OnInit {
 
   constructor(private shipService: ShipService,
     private starshipsearchService: StarshipsearchService) {
-      this.starshipsearchService.search(this.searchTerm$)
+    this.starshipsearchService.search(this.searchTerm$)
       .subscribe(results => {
         this.results = results.results;
-    });
+      });
   }
 
   ngOnInit() {
     this.shipService
-        .getAll()
-        .subscribe(p => this.ship = p);
+      .getAll()
+      .subscribe(p => this.ship = p);
   }
 }

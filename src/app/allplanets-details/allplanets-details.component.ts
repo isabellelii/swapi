@@ -32,26 +32,26 @@ export class AllplanetsDetailsComponent implements OnInit, OnDestroy {
   sub: any;
 
   constructor(private allplanetsService: AllplanetsService,
-              private route: ActivatedRoute,
-              private router: Router){
+    private route: ActivatedRoute,
+    private router: Router) {
   }
 
-  ngOnInit(){
-      this.sub = this.route.params.subscribe(params => {
-        let id = Number.parseInt(params['id']);
-        console.log('getting planet with id: ', id);
-        this.allplanetsService
-          .get(id)
-          .subscribe(p => this.planet = p);
-      });
+  ngOnInit() {
+    this.sub = this.route.params.subscribe(params => {
+      let id = Number.parseInt(params['id']);
+      console.log('getting planet with id: ', id);
+      this.allplanetsService
+        .get(id)
+        .subscribe(p => this.planet = p);
+    });
   }
 
-  ngOnDestroy(){
-      this.sub.unsubscribe();
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 
-  gotoAllplanetsList(){
-      let link = ['/planets'];
-      this.router.navigate(link);
+  gotoAllplanetsList() {
+    let link = ['/planets'];
+    this.router.navigate(link);
   }
 }

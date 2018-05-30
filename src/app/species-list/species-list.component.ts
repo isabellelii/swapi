@@ -42,16 +42,16 @@ export class SpeciesListComponent implements OnInit {
   searchTerm$ = new Subject<string>();
 
   constructor(private speciesService: SpeciesService,
-              private speciessearchService: SpeciessearchService) {
-      this.speciessearchService.search(this.searchTerm$)
-        .subscribe(results => {
-          this.results = results.results;
-        });
-    }
+    private speciessearchService: SpeciessearchService) {
+    this.speciessearchService.search(this.searchTerm$)
+      .subscribe(results => {
+        this.results = results.results;
+      });
+  }
 
   ngOnInit() {
-   this.speciesService
-       .getAll()
-       .subscribe(p => this.species = p);
- }
+    this.speciesService
+      .getAll()
+      .subscribe(p => this.species = p);
+  }
 }

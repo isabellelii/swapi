@@ -13,7 +13,7 @@ import { Subject } from 'rxjs/Subject';
     <div class="input-group-prepend">
       <span class="input-group-text" id="inputGroup-sizing-lg">Search for people</span>
     </div>
-  <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm"
+    <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm"
     (keyup)="searchTerm$.next($event.target.value)" >
     <ul *ngIf="results">
       <li *ngFor="let result of results | slice:0:9">
@@ -22,8 +22,8 @@ import { Subject } from 'rxjs/Subject';
         {{result.name}} is a {{result.gender}} that weights {{result.weight}}kg, is {{result.height}} centimeters tall
         and have {{result.eye_color}} eyes and {{result.hair_color}} hair.
       </p>
-    </li>
-  </ul>
+      </li>
+    </ul>
   </div>
 
   <div class="list-group">

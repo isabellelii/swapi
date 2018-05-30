@@ -21,56 +21,57 @@ import { AuthGuard } from './_guards/auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
-    { path: 'login', component: LoginComponent },
-    { path: 'register', component: RegisterComponent
+  { path: 'login', component: LoginComponent },
+  {
+    path: 'register', component: RegisterComponent
   },
   {
-    path: 'persons',
-    component: PeopleListComponent,  canActivate: [AuthGuard]
+    path: 'people',
+    component: PeopleListComponent, canActivate: [AuthGuard]
   },
   {
     path: 'persons/:id',
-    component: PersonDetailsComponent,  canActivate: [AuthGuard]
+    component: PersonDetailsComponent, canActivate: [AuthGuard]
   },
   {
     path: 'movies',
-    component: FilmListComponent,  canActivate: [AuthGuard]
+    component: FilmListComponent, canActivate: [AuthGuard]
   },
   {
     path: 'movies/:id',
-    component: FilmDetailsComponent,  canActivate: [AuthGuard]
+    component: FilmDetailsComponent, canActivate: [AuthGuard]
   },
   {
     path: 'starships',
-    component: ShipListComponent,  canActivate: [AuthGuard]
+    component: ShipListComponent, canActivate: [AuthGuard]
   },
   {
     path: 'starships/:id',
-    component: ShipDetailsComponent,  canActivate: [AuthGuard]
+    component: ShipDetailsComponent, canActivate: [AuthGuard]
   },
   {
     path: 'planets',
-    component: AllplanetsListComponent,  canActivate: [AuthGuard]
+    component: AllplanetsListComponent, canActivate: [AuthGuard]
   },
   {
     path: 'planets/:id',
-    component: AllplanetsDetailsComponent,  canActivate: [AuthGuard]
+    component: AllplanetsDetailsComponent, canActivate: [AuthGuard]
   },
   {
     path: 'species',
-    component: SpeciesListComponent,  canActivate: [AuthGuard]
+    component: SpeciesListComponent, canActivate: [AuthGuard]
   },
   {
     path: 'species/:id',
-    component: SpeciesDetailsComponent,  canActivate: [AuthGuard]
+    component: SpeciesDetailsComponent, canActivate: [AuthGuard]
   },
   {
     path: 'vehicles',
-    component: VehiclesListComponent,  canActivate: [AuthGuard]
+    component: VehiclesListComponent, canActivate: [AuthGuard]
   },
   {
     path: 'vehicles/:id',
-    component: VehiclesDetailsComponent,  canActivate: [AuthGuard]
+    component: VehiclesDetailsComponent, canActivate: [AuthGuard]
   },
 ];
 

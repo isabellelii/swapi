@@ -10,30 +10,30 @@ import { Person } from "../_models/person";
 })
 
 export class PersonDetailsComponent implements OnInit, OnDestroy {
-    person: Person;
-    sub: any;
+  person: Person;
+  sub: any;
 
-    constructor(private peopleService: PeopleService,
-                private route: ActivatedRoute,
-                private router: Router){
-    }
-
-    ngOnInit(){
-        this.sub = this.route.params.subscribe(params => {
-          let id = Number.parseInt(params['id']);
-          console.log('getting person with id: ', id);
-          this.peopleService
-            .get(id)
-            .subscribe(p => this.person = p);
-        });
-    }
-
-    ngOnDestroy(){
-        this.sub.unsubscribe();
-    }
-
-    gotoPeoplesList(){
-        let link = ['/persons'];
-        this.router.navigate(link);
-    }
+  constructor(private peopleService: PeopleService,
+    private route: ActivatedRoute,
+    private router: Router) {
   }
+
+  ngOnInit() {
+    this.sub = this.route.params.subscribe(params => {
+      let id = Number.parseInt(params['id']);
+      console.log('getting person with id: ', id);
+      this.peopleService
+        .get(id)
+        .subscribe(p => this.person = p);
+    });
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
+  }
+
+  gotoPeoplesList() {
+    let link = ['/people'];
+    this.router.navigate(link);
+  }
+}

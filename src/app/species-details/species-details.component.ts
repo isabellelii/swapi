@@ -31,26 +31,26 @@ export class SpeciesDetailsComponent implements OnInit {
   sub: any;
 
   constructor(private speciesService: SpeciesService,
-              private route: ActivatedRoute,
-              private router: Router){
+    private route: ActivatedRoute,
+    private router: Router) {
   }
 
-  ngOnInit(){
-      this.sub = this.route.params.subscribe(params => {
-        let id = Number.parseInt(params['id']);
-        console.log('getting species with id: ', id);
-        this.speciesService
-          .get(id)
-          .subscribe(p => this.animal = p);
-      });
+  ngOnInit() {
+    this.sub = this.route.params.subscribe(params => {
+      let id = Number.parseInt(params['id']);
+      console.log('getting species with id: ', id);
+      this.speciesService
+        .get(id)
+        .subscribe(p => this.animal = p);
+    });
   }
 
-  ngOnDestroy(){
-      this.sub.unsubscribe();
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 
-  gotoSpeciesList(){
-      let link = ['/species'];
-      this.router.navigate(link);
+  gotoSpeciesList() {
+    let link = ['/species'];
+    this.router.navigate(link);
   }
-  }
+}

@@ -31,26 +31,26 @@ export class ShipDetailsComponent implements OnInit {
   sub: any;
 
   constructor(private shipService: ShipService,
-              private route: ActivatedRoute,
-              private router: Router){
+    private route: ActivatedRoute,
+    private router: Router) {
   }
 
-  ngOnInit(){
-      this.sub = this.route.params.subscribe(params => {
-        let id = Number.parseInt(params['id']);
-        console.log('getting starship with id: ', id);
-        this.shipService
-          .get(id)
-          .subscribe(p => this.starship = p);
-      });
+  ngOnInit() {
+    this.sub = this.route.params.subscribe(params => {
+      let id = Number.parseInt(params['id']);
+      console.log('getting starship with id: ', id);
+      this.shipService
+        .get(id)
+        .subscribe(p => this.starship = p);
+    });
   }
 
-  ngOnDestroy(){
-      this.sub.unsubscribe();
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 
-  gotoShipList(){
-      let link = ['/starships'];
-      this.router.navigate(link);
+  gotoShipList() {
+    let link = ['/starships'];
+    this.router.navigate(link);
   }
 }

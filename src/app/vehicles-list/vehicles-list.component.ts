@@ -43,16 +43,16 @@ export class VehiclesListComponent implements OnInit {
   searchTerm$ = new Subject<string>();
 
   constructor(private vehiclesService: VehiclesService,
-              private vehiclesearchService: VehiclesearchService) {
-                this.vehiclesearchService.search(this.searchTerm$)
-                .subscribe(results => {
-                  this.results = results.results;
-                });
-              }
+    private vehiclesearchService: VehiclesearchService) {
+    this.vehiclesearchService.search(this.searchTerm$)
+      .subscribe(results => {
+        this.results = results.results;
+      });
+  }
 
   ngOnInit() {
     this.vehiclesService
-        .getAll()
-        .subscribe(p => this.vehicles = p);
+      .getAll()
+      .subscribe(p => this.vehicles = p);
   }
 }

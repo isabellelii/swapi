@@ -33,26 +33,26 @@ export class VehiclesDetailsComponent implements OnInit {
   sub: any;
 
   constructor(private vehicleService: VehiclesService,
-              private route: ActivatedRoute,
-              private router: Router){
+    private route: ActivatedRoute,
+    private router: Router) {
   }
 
-  ngOnInit(){
-      this.sub = this.route.params.subscribe(params => {
-        let id = Number.parseInt(params['id']);
-        console.log('getting vehicle with id: ', id);
-        this.vehicleService
-          .get(id)
-          .subscribe(p => this.transport = p);
-      });
+  ngOnInit() {
+    this.sub = this.route.params.subscribe(params => {
+      let id = Number.parseInt(params['id']);
+      console.log('getting vehicle with id: ', id);
+      this.vehicleService
+        .get(id)
+        .subscribe(p => this.transport = p);
+    });
   }
 
-  ngOnDestroy(){
-      this.sub.unsubscribe();
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 
-  gotoVehicleList(){
-      let link = ['/vehicles'];
-      this.router.navigate(link);
+  gotoVehicleList() {
+    let link = ['/vehicles'];
+    this.router.navigate(link);
   }
 }
