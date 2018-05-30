@@ -2,14 +2,16 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 
 import { VehiclesService } from '../_services/vehicles.service';
-import { Transport } from '../transport';
+import { Transport } from '../_models/transport';
 
 @Component({
   selector: 'app-vehicles-details',
   template: `
+  <div class="jumbotron jumbotron-fluid">
+  <div class="container">
   <section *ngIf="transport">
     <section>
-      <h2>You selected: {{transport.name}}</h2>
+      <h2 class="display-4">You selected: {{transport.name}}</h2>
       <h3>Description</h3>
       <p> Name: {{transport.name}} </p>
       <p> Model: {{transport.model}} </p>
@@ -19,8 +21,10 @@ import { Transport } from '../transport';
       <p> Passengers: {{transport.passengers}} people </p>
       <p> Vehicle class: {{transport.vehicle_class}} meter </p>
     </section>
-    <button (click)="gotoVehicleList()">Back to vehicle list</button>
+      <button class="btn btn-outline-warning btn-lg btn-block" (click)="gotoVehicleList()">Back to vehicle list</button>
   </section>
+  </div>
+</div>
   `,
   styles: []
 })

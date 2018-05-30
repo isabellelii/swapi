@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 
 import { PeopleService } from "../_services/people.service";
-import { Person } from "../person";
+import { Person } from "../_models/person";
 
 @Component({
   selector: 'app-person-details',

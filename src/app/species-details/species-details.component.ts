@@ -2,13 +2,15 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 
 import { SpeciesService } from "../_services/species.service";
-import { Animal } from "../animal";
+import { Animal } from "../_models/animal";
 @Component({
   selector: 'app-species-details',
   template: `
+  <div class="jumbotron jumbotron-fluid">
+  <div class="container">
   <section *ngIf="animal">
     <section>
-      <h2>You selected: {{animal.name}}</h2>
+      <h2 class="display-4">You selected: {{animal.name}}</h2>
       <h3>Description</h3>
       <p>  Name: {{animal.name}} </p>
       <p>  Average height: {{animal.average_height}} </p>
@@ -18,8 +20,10 @@ import { Animal } from "../animal";
       <p>  Average lifespan: {{animal.average_lifespan}} </p>
       <p>  Language: {{animal.language}} </p>
     </section>
-    <button type="button"  [routerLink]="['/species']">Back to species list</button>
+    <button class="btn btn-outline-warning btn-lg btn-block" [routerLink]="['/species']">Back to species list</button>
   </section>
+  </div>
+</div>
   `
 })
 export class SpeciesDetailsComponent implements OnInit {

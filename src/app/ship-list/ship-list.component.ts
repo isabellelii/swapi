@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Starship } from '../starship';
+import { Starship } from '../_models/starship';
 import { ShipService } from '../_services/ship.service';
 import { StarshipsearchService } from '../_services/starshipsearch.service';
 import { Subject } from 'rxjs/Subject';
@@ -8,15 +8,15 @@ import { Subject } from 'rxjs/Subject';
   selector: 'app-ship-list',
   template: `
   <h1>Starships</h1>
-  <div class="input-group">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="">Search</span>
-  </div>
-  <input
+  <div class="input-group input-group-lg">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-lg">Search for starships</span>
+    </div>
+  <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm"
     (keyup)="searchTerm$.next($event.target.value)" >
     <ul *ngIf="results">
       <li *ngFor="let result of results | slice:0:9">
-        <h1>  {{ result.name  }}</h1>
+        <h2>  {{ result.name  }}</h2>
         <p>
           {{result.name}} is a starship with the model of {{result.model}}. This starship has a max speed of {{result.max_atmosphering_speed}} kilometers per hour.
           On the starship, there is a crew of {{result.crew}} people and {{result.passengers}} passengers.

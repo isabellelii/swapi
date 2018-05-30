@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Transport } from '../transport';
+import { Transport } from '../_models/transport';
 import { VehiclesService } from '../_services/vehicles.service';
 import { VehiclesearchService } from '../_services/vehiclesearch.service';
 import { Subject } from 'rxjs/Subject';
@@ -8,15 +8,16 @@ import { Subject } from 'rxjs/Subject';
   selector: 'app-vehicles-list',
   template: `
   <h1>Vehicles</h1>
-  <div class="input-group">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="">Search</span>
-  </div>
-  <input
+
+  <div class="input-group input-group-lg">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-lg">Search for vehicles</span>
+    </div>
+  <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm"
     (keyup)="searchTerm$.next($event.target.value)" >
     <ul *ngIf="results">
       <li *ngFor="let result of results | slice:0:9">
-        <h1>  {{ result.name  }}</h1>
+        <h2>  {{ result.name  }}</h2>
         <p>
           {{result.model}} is a vehicle with a length of {{result.length}} centimeters, that has a max speed of {{result.max_atmosphering_speed}} kilometers per hour.
           The vehicle has a crew of {{result.crew}} people and {{result.passengers}} passengers.

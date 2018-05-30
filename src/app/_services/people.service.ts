@@ -4,7 +4,7 @@ import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-import { Person } from '../person';
+import { Person } from '../_models/person';
 
 const PEOPLE : Person[] = [
       {id: 1, name: 'Luke Skywalker', height: 177, weight: 70, gender: 'male', eye_color: 'blue', hair_color: 'blond'},
@@ -45,7 +45,6 @@ function mapPersons(response:Response): Person[]{
 function toPerson(r:any): Person{
   let person = <Person>({
     id: extractId(r),
-    url: r.url,
     name: r.name,
     weight: Number.parseInt(r.mass),
     height: Number.parseInt(r.height),
