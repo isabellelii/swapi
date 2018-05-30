@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Animal } from '../animal';
+import { Animal } from '../_models/animal';
 import { SpeciesService } from '../_services/species.service';
 import { SpeciessearchService } from '../_services/speciessearch.service';
 import { Subject } from 'rxjs/Subject';

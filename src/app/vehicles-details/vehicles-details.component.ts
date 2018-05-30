@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 
 import { VehiclesService } from '../_services/vehicles.service';
-import { Transport } from '../transport';
+import { Transport } from '../_models/transport';
 
 @Component({
   selector: 'app-vehicles-details',

@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 
 import { ShipService } from "../_services/ship.service";
-import { Starship } from "../starship";
+import { Starship } from "../_models/starship";
 
 @Component({
   selector: 'app-ship-details',

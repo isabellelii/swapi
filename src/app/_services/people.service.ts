@@ -4,7 +4,7 @@ import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-import { Person } from '../person';
+import { Person } from '../_models/person';
 
 const PEOPLE : Person[] = [
       {id: 1, name: 'Luke Skywalker', height: 177, weight: 70, gender: 'male', eye_color: 'blue', hair_color: 'blond'},

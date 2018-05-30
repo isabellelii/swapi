@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Person } from '../person';
+import { Person } from '../_models/person';
 import { PeopleService } from "../_services/people.service";
 import { PeoplesearchService } from '../_services/peoplesearch.service';
 import { Subject } from 'rxjs/Subject';
@@ -20,7 +20,7 @@ import { Subject } from 'rxjs/Subject';
       <h2>  {{ result.name  }}</h2>
       <p>
         {{result.name}} is a {{result.gender}} that weights {{result.weight}}kg, is {{result.height}} centimeters tall
-        and have {{result.eye_color}} eyes and {{result.hair_color}} hair. 
+        and have {{result.eye_color}} eyes and {{result.hair_color}} hair.
       </p>
     </li>
   </ul>

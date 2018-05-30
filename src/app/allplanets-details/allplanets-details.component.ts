@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 
 import { AllplanetsService } from '../_services/allplanets.service';
-import { Planet } from '../planet';
+import { Planet } from '../_models/planet';
 
 @Component({
   selector: 'app-allplanets-details',

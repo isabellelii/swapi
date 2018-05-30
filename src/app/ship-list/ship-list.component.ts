@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Starship } from '../starship';
+import { Starship } from '../_models/starship';
 import { ShipService } from '../_services/ship.service';
 import { StarshipsearchService } from '../_services/starshipsearch.service';
 import { Subject } from 'rxjs/Subject';

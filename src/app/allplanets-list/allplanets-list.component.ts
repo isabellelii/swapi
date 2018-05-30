@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Planet } from '../planet';
+import { Planet } from '../_models/planet';
 import { AllplanetsService } from '../_services/allplanets.service';
 import { PlanetsearchService } from '../_services/planetsearch.service';
 import { Subject } from 'rxjs/Subject';

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Movie } from '../movie';
+import { Movie } from '../_models/movie';
 import { FilmService } from '../_services/film.service';
 import { FilmsearchService } from '../_services/filmsearch.service';
 import { Subject } from 'rxjs/Subject';

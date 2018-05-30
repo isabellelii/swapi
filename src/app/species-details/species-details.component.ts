@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 
 import { SpeciesService } from "../_services/species.service";
-import { Animal } from "../animal";
+import { Animal } from "../_models/animal";
 @Component({
   selector: 'app-species-details',
   template: `

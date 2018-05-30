@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Transport } from '../transport';
+import { Transport } from '../_models/transport';
 import { VehiclesService } from '../_services/vehicles.service';
 import { VehiclesearchService } from '../_services/vehiclesearch.service';
 import { Subject } from 'rxjs/Subject';
