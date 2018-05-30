@@ -4,7 +4,7 @@ import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-import { Planet } from '../planet';
+import { Planet } from '../_models/planet';
 
 const ALLPLANETS : Planet[] = [
   {id: 1, name: 'Alderaan', rotation_period: 24, diameter: 12500, terrain: 'grasslands', population: 20000000, climate: 'temperate'},

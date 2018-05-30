@@ -4,7 +4,7 @@ import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-import { Starship } from '../starship';
+import { Starship } from '../_models/starship';
 
 const SHIP : Starship[] = [
       {id: 1, name: 'Executor', model: 'Executor-class star dreadnought', crew: 279144, passengers: 38000, max_atmosphering_speed: 1000, starship_class: 'Star dreadnought'},
